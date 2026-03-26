@@ -1,0 +1,149 @@
+export const skills = [
+  { name: "Java", level: 85, levelLabel: "Advanced", category: "Backend" },
+  { name: "Python (Django)", level: 90, levelLabel: "Expert", category: "Backend" },
+  { name: "PHP (Laravel)", level: 80, levelLabel: "Intermediate", category: "Backend" },
+  { name: "PostgreSQL", level: 85, levelLabel: "Advanced", category: "Backend" },
+  { name: "MySQL", level: 90, levelLabel: "Expert", category: "Backend" },
+  { name: "SQLite", level: 85, levelLabel: "Advanced", category: "Backend" },
+  { name: "Vue.js", level: 85, levelLabel: "Advanced", category: "Frontend" },
+  { name: "PrimeVue", level: 80, levelLabel: "Intermediate", category: "Frontend" },
+  { name: "React.js", level: 85, levelLabel: "Advanced", category: "Frontend" },
+  { name: "HTML", level: 95, levelLabel: "Expert", category: "Frontend" },
+  { name: "CSS", level: 90, levelLabel: "Expert", category: "Frontend" },
+  { name: "JavaScript", level: 90, levelLabel: "Expert", category: "Frontend" }
+];
+
+export const softSkills = [
+  "Decision Making",
+  "Multi-tasking",
+  "Creativity",
+  "Resourcefulness",
+  "Attention to Detail",
+  "Communication Skills",
+  "Time Management",
+  "Analytical Thinking",
+  "Problem Solving",
+  "Collaboration",
+  "Adaptability",
+  "Vibe Coding"
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "Database Design & Optimization",
+    description: "Expertise in schema design, normalization, and performance tuning for MySQL, PostgreSQL, and SQLite.",
+    icon: "Database"
+  },
+  {
+    id: 2,
+    title: "Full Stack Web Development",
+    description: "Building scalable and responsive web applications using Python/Django, PHP/Laravel, and Vue.js/React.",
+    icon: "Globe"
+  },
+  {
+    id: 3,
+    title: "System Analysis & Design",
+    description: "Translating business requirements into technical specifications and architectural designs.",
+    icon: "Layout"
+  }
+];
+
+export const education = [
+  {
+    id: 1,
+    degree: "Bachelor of Science in Information Technology",
+    specialization: "Major in Database Systems",
+    school: "Mindanao State University at Naawan",
+    year: "2022 - Present",
+    description: "Relevant Coursework: Database Systems, Web Development, Data Structures and Algorithms, System Analysis and Design Basic Networking."
+  }
+];
+
+export const certifications = [
+  {
+    id: 1,
+    title: "11th TOPCIT Philippines [GLOBAL]",
+    issuer: "Mindanao State University at Naawan",
+    description: "Successfully participated in the Test of Practical Competency in IT (TOPCIT), evaluating practical IT competencies in software development and database management."
+  },
+  {
+    id: 2,
+    title: "12th TOPCIT Philippines [GLOBAL]",
+    issuer: "Mindanao State University at Naawan",
+    description: "Demonstrated advanced IT practical skills in the 12th TOPCIT examination, focusing on real-world problem solving and technical proficiency."
+  }
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Pupil Portal: Pupil Information System",
+    description: "A comprehensive pupil information system designed to manage student data effectively.",
+    technologies: ["Python", "Django", "Vue.js", "PrimeVue", "Inertia"],
+    images: ["https://placehold.co/600x400/2563eb/white?text=Pupil+Portal+Dashboard", "https://placehold.co/600x400/2563eb/white?text=Pupil+Portal+Records"],
+    category: "Full Stack",
+    github: "#",
+    demo: "#",
+    caseStudy: "Developed a secure student management system with automated grade calculation and real-time attendance tracking."
+  },
+  {
+    id: 2,
+    title: "InternLog: OJT Hours Tracker",
+    description: "A tracking application for monitoring On-the-Job Training hours for students.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    images: ["/2nd.png", "/1st.png", "/3rd.png", "/4th.png"],
+    category: "Frontend",
+    github: "#",
+    demo: "#",
+    caseStudy: "Built a responsive dashboard to track internship progress, calculate remaining hours, and generate weekly reports."
+  },
+  {
+    id: 3,
+    title: "GenTrack: Generation & Performance Division Reporting",
+    description: "A robust reporting system for tracking performance metrics and generation data.",
+    technologies: ["Python", "Django", "Vue.js"],
+    images: ["https://placehold.co/600x400/f59e0b/white?text=GenTrack+Dashboard"],
+    category: "Full Stack",
+    github: "#",
+    demo: "#",
+    caseStudy: "Designed a centralized reporting tool for tracking power generation metrics and performance KPIs with interactive data visualizations."
+  },
+  {
+    id: 4,
+    title: "Airbnb Clone",
+    description: "A feature-rich clone of Airbnb with property listing and booking capabilities.",
+    technologies: ["Python", "Django", "React.js", "Docker"],
+    images: ["https://placehold.co/600x400/ef4444/white?text=Airbnb+Home", "https://placehold.co/600x400/ef4444/white?text=Airbnb+Booking"],
+    category: "Full Stack",
+    github: "#",
+    demo: "#",
+    caseStudy: "Developed a property rental platform featuring secure user authentication, booking management, and responsive UI."
+  },
+  {
+    id: 5,
+    title: "Water Management Mapping System",
+    description: "An interactive mapping system for visualizing water management data.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    images: ["https://placehold.co/600x400/3b82f6/white?text=Water+Mapping+System"],
+    category: "Frontend",
+    github: "#",
+    demo: "#",
+    caseStudy: "Created an interactive GIS-inspired visualization for mapping water distribution points and consumption metrics."
+  }
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Engr. Ricardo M. Dela Cruz",
+    role: "Senior Software Engineer, NPC-GenTrack Project",
+    text: "Artchel's contribution to the GenTrack reporting system was invaluable. His ability to translate complex performance metrics into intuitive Vue.js dashboards significantly improved our monitoring efficiency."
+  },
+  {
+    id: 2,
+    name: "Prof. Maria Leonora V. Garcia",
+    role: "IT Department Head / Academic Advisor",
+    text: "During his development of the Pupil Portal, Artchel demonstrated exceptional skills in database normalization and Django backend architecture. He is a proactive problem-solver with a strong technical foundation."
+  }
+];
