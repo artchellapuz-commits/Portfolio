@@ -3,7 +3,7 @@ const Footer = () => {
     e.preventDefault();
     e.stopPropagation();
     setTimeout(() => {
-      window.open('https://github.com/Artchel2002', '_blank');
+      window.open('https://github.com/artchellapuz-commits', '_blank');
     }, 0);
   };
 
