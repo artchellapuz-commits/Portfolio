@@ -9,6 +9,10 @@ const Projects = () => {
   
   const categories = ['All', 'Full Stack', 'Frontend'];
 
+  // Helper function to get image source
+  const getImageSrc = (img) => typeof img === 'string' ? img : img.src;
+  const getImageLabel = (img) => typeof img === 'object' ? img.label : null;
+
   const filteredProjects = filter === 'All' 
     ? projects 
     : projects.filter(project => project.category === filter);
@@ -52,14 +56,14 @@ const Projects = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group relative"
             >
               <div 
                 className="relative h-48 overflow-hidden cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 <img 
-                  src={project.images[0]} 
+                  src={getImageSrc(project.images[0])} 
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -149,14 +153,44 @@ const Projects = () => {
                     {selectedProject.caseStudy}
                   </p>
                 </div>
-                {selectedProject.images.map((img, i) => (
-                  <img 
-                    key={i} 
-                    src={img} 
-                    alt={`${selectedProject.title} screenshot ${i + 1}`} 
-                    className="w-full rounded-lg shadow-md"
-                  />
-                ))}
+                {selectedProject.imageSections ? (
+                  selectedProject.imageSections.map((section, sIdx) => (
+                    <div key={sIdx} className="mb-8">
+                      <div className="mb-4">
+                        <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+                          {section.label}
+                        </span>
+                      </div>
+                      <div className="space-y-4">
+                        {section.images.map((imgIdx) => (
+                          <img 
+                            key={imgIdx}
+                            src={getImageSrc(selectedProject.images[imgIdx])} 
+                            alt={`${selectedProject.title} screenshot ${imgIdx + 1}`} 
+                            className="w-full rounded-lg shadow-md"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  selectedProject.images.map((img, i) => (
+                    <div key={i}>
+                      <img 
+                        src={getImageSrc(img)} 
+                        alt={`${selectedProject.title} screenshot ${i + 1}`} 
+                        className="w-full rounded-lg shadow-md"
+                      />
+                      {getImageLabel(img) && (
+                        <div className="mt-2 text-center">
+                          <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            {getImageLabel(img)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                )}
               </div>
             </motion.div>
           </motion.div>

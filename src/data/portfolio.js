@@ -79,13 +79,24 @@ export const projects = [
   {
     id: 1,
     title: "Pupil Portal: Pupil Information System",
-    description: "A comprehensive pupil information system designed to manage student data effectively.",
-    technologies: ["Python", "Django", "Vue.js", "PrimeVue", "Inertia"],
-    images: ["https://placehold.co/600x400/2563eb/white?text=Pupil+Portal+Dashboard", "https://placehold.co/600x400/2563eb/white?text=Pupil+Portal+Records"],
+    description: "A comprehensive landing page and pupil management system for streamlined enrollment, student records, and academic tracking.",
+    technologies: ["Python", "Django", "Vue.js", "PrimeVue", "Inertia", "Tailwind CSS"],
+    images: [
+      { src: "/1.0.png" },
+      { src: "/1.1.png" },
+      { src: "/1.2.png" },
+      { src: "/1.3.png" },
+      { src: "/1.4.png" }
+    ],
+    imageSections: [
+      { label: "Landing Page", images: [0, 1, 2, 3] },
+      { label: "Login Page", images: [4] }
+    ],
     category: "Full Stack",
+    label: "Landing Page",
     github: "#",
     demo: "#",
-    caseStudy: "Developed a secure student management system with automated grade calculation and real-time attendance tracking."
+    caseStudy: "Developed a comprehensive student information portal featuring an interactive landing page with enrollment pathway selection, real-time school events & announcements, complete student management system with automated grade calculation, attendance tracking, and role-based access control for students, teachers, and administrators."
   },
   {
     id: 2,
